@@ -1,0 +1,1 @@
+#1 GUI changes for better visibility, minute hand is not blue and hour hand is red.

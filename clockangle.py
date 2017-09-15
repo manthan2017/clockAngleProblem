@@ -10,14 +10,14 @@ for line in file:
 				minute = int(line[3]+line[4])
 				minDeg = 6*minute
 				minAngle = (minDeg*math.pi)/180
-				miny = 130 - (70*math.cos(minAngle))
-				minx = (70*math.sin(minAngle)) + 150
+				miny = 130 - (90*math.cos(minAngle))
+				minx = (90*math.sin(minAngle)) + 150
 				
 				hour = int(line[0]+line[1])
 				hrDeg = 0.5*(60*hour+minute)
 				hrAngle = (hrDeg*math.pi)/180
-				hry = 130 - (55*math.cos(hrAngle))
-				hrx = (55*math.sin(hrAngle)) + 150
+				hry = 130 - (70*math.cos(hrAngle))
+				hrx = (70*math.sin(hrAngle)) + 150
 				
 				realHour = hour
 				if(hour>12):
@@ -65,8 +65,9 @@ for line in file:
 						canvas_id = C.create_text(200, 275, anchor="nw")
 						C.itemconfig(canvas_id, text="Time : "+str(realHour)+":"+str(minute))
 				
-					line = C.create_line(hrx, hry, 150, 130, width = 10)
-					line = C.create_line(minx, miny, 150, 130, width = 6)
+					line = C.create_line(hrx, hry, 150, 130, width = 10, fill="Red")
+					line = C.create_line(minx, miny, 150, 130, width = 8, fill="Blue")
+					oval = C.create_oval(140, 120, 160, 140, width=2, fill="Black")
 				
 					C.pack()
 				else:
@@ -81,14 +82,14 @@ for line in file:
 				minute = int(line[3]+line[4])
 				minDeg = 6*minute
 				minAngle = (minDeg*math.pi)/180
-				miny = 130 - (70*math.cos(minAngle))
-				minx = (70*math.sin(minAngle)) + 150
+				miny = 130 - (90*math.cos(minAngle))
+				minx = (90*math.sin(minAngle)) + 150
 				
 				hour = int(line[0]+line[1])
 				hrDeg = 0.5*(60*hour+minute)
 				hrAngle = (hrDeg*math.pi)/180
-				hry = 130 - (55*math.cos(hrAngle))
-				hrx = (55*math.sin(hrAngle)) + 150
+				hry = 130 - (70*math.cos(hrAngle))
+				hrx = (70*math.sin(hrAngle)) + 150
 				realHour = hour
 				if(hour>12):
 					hour-=12
@@ -123,8 +124,9 @@ for line in file:
 					canvas_id = C.create_text(20, 275, anchor="nw")
 					C.itemconfig(canvas_id, text="Angle : "+str(btAngle))
 				
-					line = C.create_line(hrx, hry, 150, 130, width = 10)
-					line = C.create_line(minx, miny, 150, 130, width = 6)
+					line = C.create_line(hrx, hry, 150, 130, width = 10, fill="Red")
+					line = C.create_line(minx, miny, 150, 130, width = 8, fill="Blue")
+					oval = C.create_oval(140, 120, 160, 140, width=2, fill="Black")
 				
 					if(realHour<10 and minute>10):
 						canvas_id = C.create_text(200, 275, anchor="nw")
