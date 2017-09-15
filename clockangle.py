@@ -66,7 +66,7 @@ for line in file:
 						C.itemconfig(canvas_id, text="Time : "+str(realHour)+":"+str(minute))
 				
 					line = C.create_line(hrx, hry, 150, 130, width = 10, fill="Red")
-					line = C.create_line(minx, miny, 150, 130, width = 8, fill="Blue")
+					line = C.create_line(minx, miny, 150, 130, width = 8, fill="Black")
 					oval = C.create_oval(140, 120, 160, 140, width=2, fill="Black")
 				
 					C.pack()
@@ -125,7 +125,7 @@ for line in file:
 					C.itemconfig(canvas_id, text="Angle : "+str(btAngle))
 				
 					line = C.create_line(hrx, hry, 150, 130, width = 10, fill="Red")
-					line = C.create_line(minx, miny, 150, 130, width = 8, fill="Blue")
+					line = C.create_line(minx, miny, 150, 130, width = 8, fill="Black")
 					oval = C.create_oval(140, 120, 160, 140, width=2, fill="Black")
 				
 					if(realHour<10 and minute>10):
